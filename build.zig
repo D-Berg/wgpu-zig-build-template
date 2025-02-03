@@ -25,18 +25,15 @@ pub fn build(b: *std.Build) void {
 
 
     if (target.result.os.tag == .windows) {
-        // move lib dir to zig-out/bin, since windows needs it
+        // move contents of lib dir to zig-out/bin, since windows needs dll next to bin
         b.installDirectory(.{
             .source_dir = wgpu_dep.path("lib"),
             .install_dir = .bin,
             .install_subdir = ""
         });
-        // log.debug("path: {s}", .{b.install_path});
-        exe.addLibraryPath(.{ .cwd_relative = b.pathJoin( &.{ b.install_path, "bin" }) });
-    } else {
-        exe.addLibraryPath(wgpu_dep.path("lib"));
-
     }
+
+    exe.addLibraryPath(wgpu_dep.path("lib"));
     exe.linkSystemLibrary("wgpu_native");
 
     const translate_c = b.addTranslateC(.{

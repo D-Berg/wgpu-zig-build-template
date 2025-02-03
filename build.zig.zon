@@ -17,6 +17,12 @@
         //     .hash = "1220e329ad53c8d971babf4555aee332595d5a26154e43bbc7e7c6a90bf3b7c4d73a"
         //
         // }
+        //
+        // .wgpu = .{ //windows 
+        //     .url = "https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-windows-x86_64-gnu-release.zip",
+        //     .hash = "1220245eaf64beab185bdd1b52cb7cedd8d0b7f1d545e41f67325dd32e562fee0380"
+        // }
+
 
 
     },
