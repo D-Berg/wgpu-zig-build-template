@@ -1,0 +1,32 @@
+.{
+    .name = "gfx-app",
+
+    .version = "0.0.0",
+    .dependencies = .{
+        .wgpu = .{ // macos
+            .url = "https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-macos-aarch64-release.zip",
+            .hash = "1220aa5c0ca2feb2ec5159623b4a50e0ab33add2eee329ffd922773e3952f4e46568"
+        }
+        // .wgpu = .{ // linux
+        //     .url = "https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-linux-x86_64-release.zip",
+        //     .hash = "12202d55660b2b66a8cf0ae68cb5ac294e93b9b048099f77f5f09987c61091a579a8"
+        // }
+
+        // .wgpu = .{
+        //     .url = "https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-linux-aarch64-release.zip",
+        //     .hash = "1220e329ad53c8d971babf4555aee332595d5a26154e43bbc7e7c6a90bf3b7c4d73a"
+        //
+        // }
+
+
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        // For example...
+        //"LICENSE",
+        //"README.md",
+    },
+}
